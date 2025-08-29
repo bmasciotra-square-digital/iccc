@@ -1,0 +1,33 @@
+// Import fonts first
+@use './app/styles/fonts.scss';
+
+body {
+  margin: 0;
+  font-family: var(--font-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+}
+
+code {
+  font-family: var(--font-mono);
+}
+
+// Base typography styles
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-secondary);
+  font-weight: 600;
+  line-height: 1.3;
+  margin: 0 0 1rem 0;
+}
+
+p, span, div {
+  font-family: var(--font-primary);
+}
+
+// Utility classes for fonts
+.font-primary { font-family: var(--font-primary); }
+.font-secondary { font-family: var(--font-secondary); }
+.font-mono { font-family: var(--font-mono); }
+
+
