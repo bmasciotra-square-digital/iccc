@@ -35,9 +35,9 @@ export const NavigationBar: React.FC = () => {
         <div id="menuToggle" className="iccc-navigation-bar__container__mobile-menu">
           <div className="iccc-navigation-bar__container__mobile-menu__toggle">
             <input type="checkbox" />
-            <span id="span1"></span>
-            <span id="span2"></span>
-            <span id="span3"></span>
+            <span id="bar-1"></span>
+            <span id="bar-2"></span>
+            <span id="bar-3"></span>
           </div>
           <ul id="menu" className="iccc-navigation-bar__container__mobile-menu__panel">
             <li>
