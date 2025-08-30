@@ -1,15 +1,125 @@
 @use "../../styles/index.scss" as styles;
 
 .iccc-hero {
-  background-image: url("/images/compounding.png");
+  position: relative;
   height: 100vh;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
   text-align: center;
-  filter: brightness(0.5);
+
+  @media (max-width: styles.$navigation-breakpoint-tablet) {
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("/images/compounding.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: brightness(0.5);
+    z-index: -1;
+  }
+
+  &__container {
+    top: 50px;
+    width: 75%;
+    height: 70%;
+    display: flex;
+    position: relative;
+    z-index: 1;
+
+    @media (max-width: styles.$navigation-breakpoint-tablet) {
+      width: 90%;
+      top:0px;
+      height: 80%;
+      bottom: 50px;
+    }
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+      align-items: flex-end;
+      justify-content: center;
+
+      &__text {
+        height: 100%;
+        text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+
+        @media (max-width: styles.$navigation-breakpoint-tablet) {
+          align-items: center;
+          text-align: center;
+          justify-content: center;
+        }
+
+        h1 {
+          font-size: 5rem;
+          font-weight: bold;
+          line-height: 1;
+          @media (max-width: styles.$navigation-breakpoint-tablet) {
+            font-size: 3rem;
+          }
+        }
+
+        &__actions {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: space-between;
+          gap: 20px;
+          width: 100%;
+        }
+      }
+
+      &__actions {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        background-color: white;
+        opacity: 0.7;
+        border-radius: 20px;
+        width: 100%;
+        height: 40%;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+        @media (max-width: styles.$navigation-breakpoint-tablet) {
+          grid-template-columns: repeat(1, 1fr);
+            height: 100%;
+        }
+        &__tile {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          color: styles.$navy;
+
+          h2 {
+            font-size: 2rem;
+            font-weight: bold;
+            line-height: 1;
+            padding: 0;
+          }
+          p {
+            line-height: 1;
+            padding: 0;
+            font-weight: 500;
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
 }
