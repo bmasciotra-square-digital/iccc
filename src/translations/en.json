@@ -1,9 +1,16 @@
 {
-    "tokens": {
-        "pages": {
-            "home": {
-                "title": "ICCC"
-            }
-        }
+  "tokens": {
+    "pages": {
+      "home": {
+        "title": "ICCC"
+      }
+    },
+    "navigation": {
+      "services": "Services",
+      "about": "About",
+      "contact": "Contact",
+      "experience": "Experience",
+      "login": "Login"
     }
+  }
 }

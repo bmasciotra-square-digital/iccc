@@ -12,7 +12,6 @@ interface PageWrapperProps {
 export const PageWrapper: React.FC<PageWrapperProps> = ({ 
   children, 
   className = '',
-  title 
 }) => {
   return (
     <div className={`iccc-page-wrapper ${className}`}>

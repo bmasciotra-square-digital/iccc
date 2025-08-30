@@ -1,0 +1,67 @@
+
+// Border radius
+$main-border-radius: 25px;
+$main-border-radius-mobile: 10px;
+$border-radius-small: 5px;
+$border-radius-medium: 10px;
+$border-radius-large: 45px;
+$border-radius-xl: 50px;
+
+// Padding
+$none: 0;
+$padding-xs: 10px;
+$padding-sm: 12px;
+$padding-md: 20px;
+$padding-lg: 24px;
+$padding-xl: 40px;
+$padding-xxl: 100px;
+$padding-xxxl: 200px;
+
+// Margin
+$margin-xs: 10px;
+$margin-sm: 12px;
+$margin-md: 20px;
+$margin-lg: 24px;
+$margin-xl: 40px;
+$margin-xxl: 50px;
+$margin-xxxl: 100px;
+
+// Gap
+$gap-xs: 10px;
+$gap-sm: 15px;
+$gap-md: 20px;
+$gap-lg: 24px;
+$gap-xl: 40px;
+$gap-xxl: 80px;
+
+// Size 
+$size-1: 4px;
+$size-2: 8px;
+$size-3: 12px;
+$size-4: 16px;
+$size-5: 20px;
+$size-6: 24px;
+$size-7: 28px;
+$size-8: 32px;
+$size-9: 36px;
+$size-10: 40px;
+$size-11: 44px;
+$size-12: 48px;
+$size-14: 56px;
+$size-16: 64px;
+$size-18: 72px;
+$size-20: 80px;
+
+// Global
+$site-padding: $size-10;
+$site-padding-mobile: $size-3;
+
+$navigation-breakpoint-tablet-lg:1200px;
+$navigation-breakpoint-tablet:1025px;
+$navigation-breakpoint-tablet-sm:900px;
+$navigation-breakpoint-mobile: 770px;
+
+:export {
+  navigationBreakpointTablet: $navigation-breakpoint-tablet;
+  navigationBreakpointMobile: $navigation-breakpoint-mobile;
+}

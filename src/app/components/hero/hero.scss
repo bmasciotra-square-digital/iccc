@@ -1,0 +1,15 @@
+@use "../../styles/index.scss" as styles;
+
+.iccc-hero {
+  background-image: url("/images/compounding.png");
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  filter: brightness(0.5);
+}
