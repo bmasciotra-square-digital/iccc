@@ -6,13 +6,11 @@ import { Footer } from "../../components/footer/Footer";
 interface PageWrapperProps {
   children: React.ReactNode;
   className?: string;
-  title?: string;
 }
 
 export const PageWrapper: React.FC<PageWrapperProps> = ({ children, className = "" }) => {
   return (
     <div className={`iccc-page-wrapper ${className}`}>
-      {/* Header Section */}
       <header className="iccc-page-wrapper__header">
         <NavigationBar />
       </header>

@@ -38,7 +38,7 @@ export const Home: React.FC = () => {
     },
   ];
   return (
-    <PageWrapper title="Welcome to ICCC">
+    <PageWrapper>
       <div className="home-content">
         <Hero />
         <AboutUs />
@@ -55,23 +55,10 @@ export const Home: React.FC = () => {
           }}
         />
         <InfoBullets
-          image={"/images/research.jpg"}
-          title={"Industy Experience"}
-          description={"Excellence In Specialised Pharmacy Solutions"}
-          bullets={[
-            {
-              icon: "/images/icons/bullet-1.png",
-              text: "Comprehensive expertise in specialised pharmacy solutions from custom compounding to oncology and clinical trials",
-            },
-            {
-              icon: "/images/icons/bullet-2.png",
-              text: "Collaborating with healthcare professionals and services",
-            },
-            {
-              icon: "/images/icons/bullet-3.png",
-              text: "Unwavering commitment to medication safety and patient outcomes",
-            },
-          ]}
+          image={tokens.pages.home.bullets.image}
+          title={tokens.pages.home.bullets.title}
+          description={tokens.pages.home.bullets.description}
+          bullets={tokens.pages.home.bullets.items}
         />
       </div>
       <Contact />

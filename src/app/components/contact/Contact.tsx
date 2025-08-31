@@ -9,7 +9,7 @@ export const Contact: React.FC = () => {
               <div className="iccc-contact__container__get-in-touch__text__heading__title">
                 <h1>Get In Touch</h1>
                 <p>
-                  Have questions or need expert compounding support? Reach out to ICCC today. we’re here to provide
+                  Have questions or need expert compounding support? Reach out to ICCC today. We’re here to provide
                   guidance, solutions, and reliable service tailored to your needs
                 </p>
               </div>
@@ -28,7 +28,7 @@ export const Contact: React.FC = () => {
                 </div>
                 <div className="iccc-contact__container__get-in-touch__text__heading__option__text">
                   <h2>Email:</h2>
-                  <p>jaison.varghese@iccc.com.au</p>
+                  <p>compounding@iccc.com.au</p>
                 </div>
               </div>
             </div>

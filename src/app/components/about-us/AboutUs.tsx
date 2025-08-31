@@ -1,25 +1,21 @@
+import React from "react";
 import "./about-us.scss";
+import en from "../../../translations/en.json";
 
 export const AboutUs: React.FC = () => {
+  const { tokens } = en;
+
   return (
     <div className="iccc-about-us">
       <div className="iccc-about-us__container">
         <div className="iccc-about-us__container__heading">
-          <h2>About Us</h2>
-          <h1>ICCC: Trusted Leaders in Advanced Pharmaceutical Solutions</h1>
+          <h2>{tokens.pages.home.aboutUs.heading}</h2>
+          <h1>{tokens.pages.home.aboutUs.title}</h1>
         </div>
         <div className="iccc-about-us__container__content">
-          <p>
-            Innovative Custom Compounding Chemist (ICCC) is your trusted partner in expert compounding and advanced
-            pharmaceutical solutions. With over 30 years of specialised experience, we collaborate with a network of
-            leading community and hospital pharmacies across Australia, delivering seamless logistics and professional
-            support to ensure trusted outcomes and the highest standards of patient care.
-          </p>
-          <p>
-            Our team of highly skilled registered pharmacists is committed to precision, safety, and innovation in
-            compounding, helping healthcare providers deliver tailored treatments that meet every patient’s unique
-            needs.
-          </p>
+          {tokens.pages.home.aboutUs.content.map((paragraph, index) => (
+            <p key={index}>{paragraph}</p>
+          ))}
         </div>
       </div>
     </div>

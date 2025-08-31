@@ -1,9 +1,36 @@
 {
   "tokens": {
     "pages": {
-      "home": {
-        "title": "ICCC",
-        "infoCards": {
+              "home": {
+          "title": "ICCC",
+          "bullets": {
+            "image": "/images/patient.jpeg",
+            "title": "Industry Experience",
+            "description": "Excellence In Specialised Pharmacy Solutions",
+            "items": [
+              {
+                "icon": "/images/icons/bullet-1.png",
+                "text": "Comprehensive expertise in specialised pharmacy solutions from custom compounding to oncology and clinical trials"
+              },
+              {
+                "icon": "/images/icons/bullet-2.png",
+                "text": "Collaborating with healthcare professionals and services"
+              },
+              {
+                "icon": "/images/icons/bullet-3.png",
+                "text": "Unwavering commitment to medication safety and patient outcomes"
+              }
+            ]
+          },
+          "aboutUs": {
+            "heading": "About Us",
+            "title": "ICCC: Trusted Leaders in Advanced Pharmaceutical Solutions",
+            "content": [
+              "Innovative Custom Compounding Chemist (ICCC) is your trusted partner in expert compounding and advanced pharmaceutical solutions. With over 30 years of specialised experience, we collaborate with a network of leading community and hospital pharmacies across Australia, delivering seamless logistics and professional support to ensure trusted outcomes and the highest standards of patient care.",
+              "Our team of highly skilled registered pharmacists is committed to precision, safety, and innovation in compounding, helping healthcare providers deliver tailored treatments that meet every patient's unique needs."
+            ]
+          },
+          "infoCards": {
           "title": "Specialised Pharmaceutical Solutions",
           "subTitle": "Expert Compounding. Trusted Outcomes",
           "description": "At ICCC, we go beyond compounding—we deliver confidence, safety, and care. Every service is built on precision, compliance, and a commitment to improving patient outcomes.",
