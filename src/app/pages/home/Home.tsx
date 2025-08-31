@@ -10,6 +10,7 @@ import crest from "/images/icons/crest.png";
 import clock from "/images/icons/clock.png";
 import lock from "/images/icons/lock.png";
 import { InfoBullets } from "../../components/info-bullets/InfoBullets";
+import { Contact } from "../../components/contact/Contact";
 
 export const Home: React.FC = () => {
   const { tokens } = en;
@@ -73,6 +74,7 @@ export const Home: React.FC = () => {
           ]}
         />
       </div>
+      <Contact />
     </PageWrapper>
   );
 };

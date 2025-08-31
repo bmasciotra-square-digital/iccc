@@ -11,58 +11,25 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
 
-  .page-main {
-    flex: 1;
+  &__main {
+    flex: 1; // ✅ This makes main take up available space
     display: flex;
     flex-direction: column;
-    
-    .page-title-section {
-      background: #f8f9fa;
-      padding: 2rem 0;
-      text-align: center;
-      border-bottom: 1px solid #e9ecef;
-      
-      .page-title {
-        margin: 0;
-        font-size: 2.5rem;
-        font-weight: 600;
-        color: #333;
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 1rem;
-      }
-    }
-    
-    .page-content {
-      flex: 1;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 2rem 1rem;
-      width: 100%;
-      box-sizing: border-box;
-    }
   }
 
-  .page-footer {
-    background: #343a40;
-    color: white;
-    padding: 2rem 0;
-    margin-top: auto;
-    
-    .footer-content {
-      max-width: 1200px;
-      margin: 0 auto;
-      text-align: center;
-      padding: 0 1rem;
-      
-      p {
-        margin: 0;
-        font-size: 0.9rem;
-        opacity: 0.8;
-      }
-    }
+  &__content {
+    flex: 1; // ✅ Content expands to fill main
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  &__footer {
+    margin-top: auto; //
+    height: 30vh; // ✅ Fixed height for consistency
   }
 }
+
+// Remove the old .page-main styles since they don't match your HTML structure
 
 // Responsive design
 @media (max-width: 768px) {
