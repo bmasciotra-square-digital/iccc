@@ -1,0 +1,74 @@
+@use "../../styles/index.scss" as styles;
+
+.iccc-info-bullets {
+    @include styles.flex-component(row, center, center);
+    height: 100vh;
+    background-color: styles.$background;
+
+    &__container{
+        @include styles.flex-component(row, space-between, center);
+        width: 90%;
+        height: 80%;
+        gap: styles.$gap-lg;
+
+
+        @media (max-width: styles.$navigation-breakpoint-tablet) {
+            flex-direction: column;
+            height: 90%;
+        }
+
+        &__image{
+            width: 40%;
+            height: 100%;
+
+            @media (max-width: styles.$navigation-breakpoint-tablet) {
+                width: 100%;
+                height: 50%;
+            }
+
+            img{
+                width: 100%;
+                height: 100%;
+                border-radius: styles.$main-border-radius;
+                object-fit: cover;
+            }
+        }
+
+        &__text-content{
+            @include styles.flex-component(column, space-between, flex-start);
+
+            width: 50%;
+            height: 100%;
+            text-align: start;
+
+            @media (max-width: styles.$navigation-breakpoint-tablet) {
+                width: 100%;
+                height: 50%;
+                gap: styles.$gap-lg;
+            }
+
+            h2{
+                color: styles.$main-blue;
+                text-transform: uppercase;
+                font-weight:500;
+            }
+
+            h1{
+                color: styles.$navy;
+                font-weight:700;
+                font-size: 3rem;
+                line-height: 1;
+                margin: 0;
+                padding: 0;
+            }
+
+            &__bullets{
+                @include styles.flex-component(column, flex-start, flex-start);
+                width: 100%;
+                height: 70%;
+                gap: styles.$gap-lg;
+            }
+        }
+    }
+}
+

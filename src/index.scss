@@ -57,9 +57,11 @@ p, span, div {
   text-decoration: none;
   text-align:center;
   font-family:var(--font-primary);
-  letter-spacing:1px;
+  transition: all 0.3s ease;
+  
   &:hover {
     color:black;
+    scale:1.05;
   }
 }
 
@@ -76,8 +78,10 @@ p, span, div {
   text-decoration: none;
   text-align:center;
   font-family:var(--font-primary);
-  letter-spacing:1px;
+  transition: all 0.3s ease;
+
   &:hover {
     color:black;
+    scale:1.05;
   }
 }

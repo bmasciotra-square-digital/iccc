@@ -1,0 +1,66 @@
+@use "../../styles/index.scss" as styles;
+
+.iccc-info-card-grid {
+  @include styles.flex-component(column, center, center);
+  height: 100vh;
+  background-color: white;
+
+  background-image: url("/images/backgrounds/logo-background-blue.png");
+  background-position: left bottom;
+  background-size: auto;
+  background-repeat: no-repeat;
+
+  @media (max-width: styles.$navigation-breakpoint-tablet) {
+    height:200vh;
+  }
+
+  &__container {
+    @include styles.flex-component(column, flex-start, center);
+    width: 85%;
+    height: 80%;
+    gap: styles.$gap-lg;
+
+    @media (max-width: styles.$navigation-breakpoint-tablet) {
+      height: 95%;
+    }
+
+    &__text-content {
+      @include styles.flex-component(column, center, center);
+      width: 100%;
+      gap: styles.$gap-lg;
+
+      h2 {
+        color: styles.$main-blue;
+        font-weight: 400;
+        line-height: 1;
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        color: styles.$navy;
+        margin: 0;
+      }
+
+      p {
+        width: 50%;
+        color: styles.$navy;
+      }
+    }
+
+    &__cards {
+        @include styles.grid-component(repeat(4, 1fr), auto, center, center);
+        height:60%;
+        width:80%;
+        gap: styles.$gap-lg;
+
+        @media (max-width: styles.$navigation-breakpoint-tablet) {
+          grid-template-columns: repeat(1, 1fr);
+        }
+    }
+
+    &__action{
+        margin-top: styles.$gap-lg;
+      
+    }
+  }
+}
