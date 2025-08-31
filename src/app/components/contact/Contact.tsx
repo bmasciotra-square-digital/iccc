@@ -1,5 +1,10 @@
+import React from "react";
 import "./contact.scss";
+import { en } from "../../../translations/en";
+
 export const Contact: React.FC = () => {
+  const { tokens } = en;
+
   return (
     <div className="iccc-contact">
       <div className="iccc-contact__container">
@@ -7,28 +12,25 @@ export const Contact: React.FC = () => {
           <div className="iccc-contact__container__get-in-touch__text">
             <div className="iccc-contact__container__get-in-touch__text__heading">
               <div className="iccc-contact__container__get-in-touch__text__heading__title">
-                <h1>Get In Touch</h1>
-                <p>
-                  Have questions or need expert compounding support? Reach out to ICCC today. We’re here to provide
-                  guidance, solutions, and reliable service tailored to your needs
-                </p>
+                <h1>{tokens.pages.home.contact.title}</h1>
+                <p>{tokens.pages.home.contact.description}</p>
               </div>
               <div className="iccc-contact__container__get-in-touch__text__heading__option">
                 <div className="iccc-contact__container__get-in-touch__text__heading__option__icon">
-                  <img src="/images/icons/target.png" alt="location" />
+                  <img src={tokens.pages.home.contact.address.icon} alt={tokens.pages.home.contact.address.alt} />
                 </div>
                 <div className="iccc-contact__container__get-in-touch__text__heading__option__text">
-                  <h2>Address:</h2>
-                  <p>T26/129 Queen Street, Southport QLD 4215</p>
+                  <h2>{tokens.pages.home.contact.address.label}</h2>
+                  <p>{tokens.pages.home.contact.address.value}</p>
                 </div>
               </div>
               <div className="iccc-contact__container__get-in-touch__text__heading__option">
                 <div className="iccc-contact__container__get-in-touch__text__heading__option__icon">
-                  <img src="/images/icons/email.png" alt="email" />
+                  <img src={tokens.pages.home.contact.email.icon} alt={tokens.pages.home.contact.email.alt} />
                 </div>
                 <div className="iccc-contact__container__get-in-touch__text__heading__option__text">
-                  <h2>Email:</h2>
-                  <p>compounding@iccc.com.au</p>
+                  <h2>{tokens.pages.home.contact.email.label}</h2>
+                  <p>{tokens.pages.home.contact.email.value}</p>
                 </div>
               </div>
             </div>
@@ -36,14 +38,14 @@ export const Contact: React.FC = () => {
           <div className="iccc-contact__container__get-in-touch__form">
             <div className="iccc-contact__container__get-in-touch__form__container">
               <form className="iccc-contact__container__get-in-touch__form__container__form">
-                <h2>Send A Message</h2>
+                <h2>{tokens.pages.home.contact.form.title}</h2>
                 <div className="iccc-contact__container__get-in-touch__form__container__form__inputs">
-                  <input type="text" placeholder="Name" />
-                  <input type="email" placeholder="Email" />
-                  <textarea rows={6} placeholder="Message" />
+                  <input type="text" placeholder={tokens.pages.home.contact.form.placeholders.name} />
+                  <input type="email" placeholder={tokens.pages.home.contact.form.placeholders.email} />
+                  <textarea rows={6} placeholder={tokens.pages.home.contact.form.placeholders.message} />
                   <div className="iccc-contact__container__get-in-touch__form__container__form__inputs__button">
                     <button type="submit" className="btn btn-primary">
-                      Submit
+                      {tokens.pages.home.contact.form.button}
                     </button>
                   </div>
                 </div>
@@ -52,10 +54,9 @@ export const Contact: React.FC = () => {
           </div>
         </div>
         <div className="iccc-contact__container__map">
-            <img src="/images/backgrounds/map.png" alt="map" />
+          <img src={tokens.pages.home.contact.map.src} alt={tokens.pages.home.contact.map.alt} />
         </div>
       </div>
-
     </div>
   );
 };

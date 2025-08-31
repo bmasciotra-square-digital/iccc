@@ -9,6 +9,7 @@ export default defineConfig({
     open: true
   },
   build: {
-    outDir: 'build'
+    outDir: 'build',
+    sourcemap: false
   }
 })

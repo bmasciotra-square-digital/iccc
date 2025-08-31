@@ -3,7 +3,7 @@ import { PageWrapper } from "../wrapper/PageWrapper";
 import { Hero } from "../../components/hero/Hero";
 import { AboutUs } from "../../components/about-us/AboutUs";
 import { InfoCardGrid } from "../../components/info-card-grid/InfoCardGrid";
-import en from "../../../translations/en.json";
+import { en } from "../../../translations/en";
 import { InfoCardProps } from "../../components/info-card/InfoCard";
 import clipboard from "/images/icons/clipboard.png";
 import crest from "/images/icons/crest.png";
@@ -14,6 +14,10 @@ import { Contact } from "../../components/contact/Contact";
 
 export const Home: React.FC = () => {
   const { tokens } = en;
+  
+  // Debug: Log the tokens to see if they're loaded
+  console.log('Tokens loaded:', tokens);
+  console.log('Info cards data:', tokens?.pages?.home?.infoCards);
 
   const cards: InfoCardProps[] = [
     {

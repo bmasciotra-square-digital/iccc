@@ -1,33 +1,31 @@
+import React from "react";
 import "./hero.scss";
+import { en } from "../../../translations/en";
 
 export const Hero: React.FC = () => {
+  const { tokens } = en;
+
   return (
     <>
       <div className="iccc-hero">
         <div className="iccc-hero__container">
           <div className="iccc-hero__container__content">
             <div className="iccc-hero__container__content__text">
-              <h1>Partnering</h1>
-              <h1>In Pharma</h1>
-              <h1>Innovation</h1>
+              {tokens.pages.home.hero.heading.map((line, index) => (
+                <h1 key={index}>{line}</h1>
+              ))}
               <div className="iccc-hero__container__content__text__actions">
-                <button className="btn btn-primary">Explore Services</button>
-                <button className="btn btn-secondary">Contact Us</button>
+                <button className="btn btn-primary">{tokens.pages.home.hero.buttons.exploreServices}</button>
+                <button className="btn btn-secondary">{tokens.pages.home.hero.buttons.contactUs}</button>
               </div>
             </div>
             <div className="iccc-hero__container__content__actions">
-              <div className="iccc-hero__container__content__actions__tile">
-                <h2>30+ Years</h2>
-                <p>Specialist experience</p>
-              </div>
-              <div className="iccc-hero__container__content__actions__tile">
-                <h2>5 Cities</h2>
-                <p>Australia wide partnet network</p>
-              </div>
-              <div className="iccc-hero__container__content__actions__tile">
-                <h2>Cold Chain</h2>
-                <p>Integrity and tracking</p>
-              </div>
+              {tokens.pages.home.hero.tiles.map((tile, index) => (
+                <div key={index} className="iccc-hero__container__content__actions__tile">
+                  <h2>{tile.title}</h2>
+                  <p>{tile.description}</p>
+                </div>
+              ))}
             </div>
           </div>
         </div>

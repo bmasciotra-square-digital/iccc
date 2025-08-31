@@ -1,6 +1,6 @@
 import React from "react";
 import "./about-us.scss";
-import en from "../../../translations/en.json";
+import { en } from "../../../translations/en";
 
 export const AboutUs: React.FC = () => {
   const { tokens } = en;
