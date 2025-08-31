@@ -9,10 +9,10 @@ export const Footer: React.FC = () => {
           <img src="/images/ICCC-logo.png" alt="ICCC" />
         </div>
         <div className="iccc-footer__container__links">
-          <Link to="/">Home</Link>
           <Link to="/">About</Link>
-          <Link to="/">Contact</Link>
           <Link to="/">Services</Link>
+          <Link to="/">Contact Us</Link>
+          <Link to="/">Locations</Link>
           <Link to="/">Login</Link>
         </div>
         <span></span>

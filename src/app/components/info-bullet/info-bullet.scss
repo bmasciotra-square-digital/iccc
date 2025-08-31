@@ -1,27 +1,53 @@
 @use "../../styles/index.scss" as styles;
 
-.iccc-info-bullet{
-    @include styles.flex-component(row, center, center);
-    width: 100%;
+.iccc-info-bullet {
+  @include styles.flex-component(row, center, center);
+  width: 100%;
+  height: 100%;
+  background-color: styles.$light;
+  border-radius: styles.$main-border-radius;
+  gap: styles.$gap-lg;
+
+  @media (max-width: styles.$navigation-breakpoint-tablet) {
+    @include styles.flex-component(column, center, center);
+    padding: styles.$padding-sm 0px;
+    height: 30vh;
+  }
+
+  &__icon {
+    @include styles.flex-component(column, center, center);
+    width: 10%;
     height: 100%;
-    background-color: styles.$light;
-    border-radius: styles.$main-border-radius;
-    gap: styles.$gap-lg;
-    
-    &__icon{
-        @include styles.flex-component(column, center, center);
-        width: 10%;
-        height: 100%;
+
+    @media (max-width: styles.$navigation-breakpoint-tablet) {
+      width: 10%;
+      height: auto;
     }
-    
-    &__text{
-        @include styles.flex-component(column, center, flex-start);
-        color: styles.$navy;
-        text-wrap: wrap;
-        font-size: 1.5rem;
-        font-weight: 600;
-        line-height: 1;
-        width: 80%;
-        height: 100%;
+  }
+
+  &__text {
+    @include styles.flex-component(column, center, flex-start);
+    color: styles.$navy;
+    text-wrap: wrap;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1;
+    width: 80%;
+    height: 100%;
+
+    @media (max-width: styles.$navigation-breakpoint-tablet) {
+      height: auto;
+      padding: 0;
+      width: 70%;
+      margin: 0;
     }
+
+    p {
+      @media (max-width: styles.$navigation-breakpoint-tablet) {
+        padding: 0;
+        margin: 0;
+        text-align: center;
+      }
+    }
+  }
 }

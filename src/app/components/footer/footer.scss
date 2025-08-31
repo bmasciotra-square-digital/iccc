@@ -6,6 +6,9 @@
   height: 100%;
   background-color: styles.$dark-blue;
 
+  @media (max-width: styles.$navigation-breakpoint-tablet) {
+    // border:solid red;
+  }
   &__container {
     @include styles.flex-component(column, flex-start, center);
     width: 80%;
@@ -16,6 +19,10 @@
       width: auto;
       height: 50%;
       //  border:solid red;
+
+      @media (max-width: styles.$navigation-breakpoint-tablet) {
+        height: auto;
+      }
 
       img {
         width: 100%;
@@ -28,6 +35,13 @@
       @include styles.flex-component(row, space-between, center);
       width: 50%;
       color: white;
+
+      @media (max-width: styles.$navigation-breakpoint-tablet) {
+        width: 100%;
+        flex-direction: column;
+        gap: styles.$gap-xs;
+        height: auto;
+      }
 
       a {
         color: white;
@@ -49,8 +63,19 @@
       width: 100%;
       margin-top: 12px;
 
+      @media (max-width: styles.$navigation-breakpoint-tablet) {
+        //   flex-direction: column;
+        gap: styles.$gap-xs;
+        height: auto;
+        font-size: 0.5rem;
+      }
+
       &__text {
         @include styles.flex-component(row, flex-start, center);
+
+        @media (max-width: styles.$navigation-breakpoint-tablet) {
+          width: 60%;
+        }
 
         p {
           color: white;
@@ -64,6 +89,10 @@
         width: 50%;
         height: 100%;
         gap: styles.$gap-lg;
+
+        @media (max-width: styles.$navigation-breakpoint-tablet) {
+          gap: styles.$gap-xs;
+        }
 
         a {
           color: white;
