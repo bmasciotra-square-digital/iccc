@@ -10,6 +10,9 @@ export default defineConfig({
   },
   build: {
     outDir: 'build',
-    sourcemap: false
+    sourcemap: false,
+    rollupOptions: {
+      treeshake: false 
+    }
   }
 })
