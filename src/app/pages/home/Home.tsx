@@ -14,10 +14,6 @@ import { Contact } from "../../components/contact/Contact";
 
 export const Home: React.FC = () => {
   const { tokens } = en;
-  
-  // Debug: Log the tokens to see if they're loaded
-  console.log('Tokens loaded:', tokens);
-  console.log('Info cards data:', tokens?.pages?.home?.infoCards);
 
   const cards: InfoCardProps[] = [
     {

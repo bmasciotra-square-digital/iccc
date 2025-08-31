@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Routes } from "../../router/routes";
-import en from "../../../translations/en.json";
+import { en } from "../../../translations/en";
 const logo = "/images/ICCC-logo.png";
 
 import "./NavigationBar.scss";
@@ -17,13 +17,13 @@ export const NavigationBar: React.FC = () => {
         </div>
 
         <div className="iccc-navigation-bar__container__links">
-          <Link to={Routes.HOME} className="nav-link">
+          <Link to={Routes.SERVICES} className="nav-link">
             {tokens.navigation.services}
           </Link>
           <Link to={Routes.ABOUT} className="nav-link">
             {tokens.navigation.about}
           </Link>
-          <Link to={Routes.ABOUT} className="nav-link">
+          <Link to={Routes.EXPERIENCE} className="nav-link">
             {tokens.navigation.experience}
           </Link>
           <Link to={Routes.CONTACT} className="nav-link">
@@ -41,16 +41,19 @@ export const NavigationBar: React.FC = () => {
           </div>
           <ul id="menu" className="iccc-navigation-bar__container__mobile-menu__panel">
             <li>
-              <a href="/">Home</a>
+              <Link to={Routes.HOME}>{tokens.navigation.home}</Link>
             </li>
             <li>
-              <a href="/">About</a>
+              <Link to={Routes.SERVICES}>{tokens.navigation.services}</Link>
             </li>
             <li>
-              <a href="/">Contact</a>
+              <Link to={Routes.ABOUT}>{tokens.navigation.about}</Link>
             </li>
             <li>
-              <a href="/">Services</a>
+              <Link to={Routes.EXPERIENCE}>{tokens.navigation.experience}</Link>
+            </li>
+            <li>
+              <Link to={Routes.CONTACT}>{tokens.navigation.contact}</Link>
             </li>
           </ul>
         </div>

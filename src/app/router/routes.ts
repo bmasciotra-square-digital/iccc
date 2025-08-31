@@ -2,6 +2,8 @@ export const Routes = {
   HOME: '/',
   ABOUT: '/about',
   CONTACT: '/contact',
+  EXPERIENCE: '/experience',
+  SERVICES: '/services',
   // Add more routes as needed
 } as const;
 

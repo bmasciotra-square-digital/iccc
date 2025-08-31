@@ -107,6 +107,7 @@ export const en = {
       }
     },
     navigation: {
+      home: "Home",
       services: "Services",
       about: "About",
       contact: "Contact",
