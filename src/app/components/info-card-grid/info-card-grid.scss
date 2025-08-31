@@ -4,14 +4,16 @@
   @include styles.flex-component(column, center, center);
   height: 100vh;
   background-color: white;
-
   background-image: url("/images/backgrounds/logo-background-blue.png");
   background-position: left bottom;
   background-size: auto;
   background-repeat: no-repeat;
 
   @media (max-width: styles.$navigation-breakpoint-tablet) {
-    height:200vh;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    padding: styles.$gap-lg 0px;
   }
 
   &__container {
@@ -19,10 +21,6 @@
     width: 85%;
     height: 80%;
     gap: styles.$gap-lg;
-
-    @media (max-width: styles.$navigation-breakpoint-tablet) {
-      height: 95%;
-    }
 
     &__text-content {
       @include styles.flex-component(column, center, center);
@@ -36,6 +34,7 @@
         margin: 0;
         padding: 0;
       }
+      
       h1 {
         color: styles.$navy;
         margin: 0;
@@ -44,23 +43,32 @@
       p {
         width: 50%;
         color: styles.$navy;
+
+        @media (max-width: styles.$navigation-breakpoint-tablet) {
+          width: 100%;
+        }
       }
     }
 
     &__cards {
-        @include styles.grid-component(repeat(4, 1fr), auto, center, center);
-        height:60%;
-        width:80%;
-        gap: styles.$gap-lg;
+      @include styles.grid-component(repeat(4, 1fr), auto, center, center);
+      height: 60%;
+      width: 80%;
+      gap: styles.$gap-lg;
 
-        @media (max-width: styles.$navigation-breakpoint-tablet) {
-          grid-template-columns: repeat(1, 1fr);
-        }
+      @media (max-width: styles.$navigation-breakpoint-tablet) {
+        grid-template-columns: repeat(1, 1fr);
+        height: auto;
+        width: 85%;
+      }
     }
 
-    &__action{
-        margin-top: styles.$gap-lg;
-      
+    &__action {
+      margin-top: styles.$gap-lg;
+
+      @media (max-width: styles.$navigation-breakpoint-tablet) {
+        margin-top: 0;
+      }
     }
   }
 }
