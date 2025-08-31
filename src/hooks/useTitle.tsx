@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import en from "../translations/en.json";
+import { en } from "../translations/en";
 
 export const useTitle = () => {
   const { tokens } = en;
